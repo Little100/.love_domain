@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little100 - 我爱你</title>
+    <style>
+        @font-face {
+            font-family: 'MinecraftAE';
+            src: url('font/MinecraftAE.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --accent-color: #ff69b4;
+            --secondary-color: #4a90e2;
+            --card-bg: #f0f0f0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #ffffff;
+                --accent-color: #ff69b4;
+                --secondary-color: #4a90e2;
+                --card-bg: #2a2a2a;
+            }
+        }
+
+        body {
+            font-family: 'MinecraftAE', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            margin-bottom: 40px;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        h2 {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--secondary-color);
+            color: var(--bg-color);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--secondary-color);
+            font-size: 0.9em;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: var(--secondary-color);
+            color: var(--bg-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Little100.我爱你</h1>
+            <span class="skill-tag">居然这里是[.我爱你]域名 那么</span>
+            <nav>
+                <ul>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#projects">项目</a></li>
+                    <li><a href="#skills">技能</a></li>
+                    <li><a href="#contact">联系方式</a></li>
+                </ul>
+            </nav>
+    
+            <span class="skill-tag">那么，我爱你们来到这里的所有人！</span>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2>关于我 👋</h2>
+                <p>你好！我是Little100，一名充满激情的开发者和创作者。我的用户名反映了我对编程的热爱和对生活的积极态度。正如我的域名所示，我在所做的每件事中都倾注了爱！</p>
+                <p>我喜欢我的世界这款游戏，它带领我走进了这个神秘的代码世界中，没有它可能也就没有现在的我。</p>
+            </section>
+
+            <section id="projects">
+                <h2>项目 📂</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>我的个人GitHub</h3>
+                        <p>可以从这里看到有关于我的具体介绍哦</p>
+                        <a href="https://github.com/Little100/" target="_blank">查看项目</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>我的世界插件</h3>
+                        <p>一个普通的我的世界铁砧修复插件</p>
+                        <a href="https://github.com/Little100/Anvil_Fixer" target="_blank">查看项目</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Minecraft Server Manager</h3>
+                        <p>使用python的flask框架[仍在开发中]</p>
+                        <a href="https://github.com/Little100/Minecraft_Server_Manager" target="_blank">查看项目</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>免费的frp提供</h3>
+                        <p>提供免费的frp服务器[目前还没]</p>
+                        <a href="https://github.com/little100" target="_blank">查看项目</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>技能[都很差] 💪</h2>
+                <div class="skill-list">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">Java</span>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>联系方式 📞</h2>
+                <p>欢迎通过以下方式与我联系...?：</p>
+                <ul>
+                    <li>个人网站：<a href="https://www.little100.top/" target="_blank">https://www.little100.top/</a></li>
+                    <li>GitHub：<a href="https://github.com/Little100" target="_blank">https://github.com/Little100</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 little100.我爱你 保留所有权利。</p>
+        </footer>
+    </div>
+
+    <button class="theme-toggle" onclick="toggleTheme()">切换主题</button>
+
+    <script>
+        function toggleTheme() {
+            const root = document.documentElement;
+            const currentBg = getComputedStyle(root).getPropertyValue('--bg-color');
+
+            if (currentBg.trim() === '#ffffff') {
+                root.style.setProperty('--bg-color', '#1a1a1a');
+                root.style.setProperty('--text-color', '#ffffff');
+                root.style.setProperty('--card-bg', '#2a2a2a');
+            } else {
+                root.style.setProperty('--bg-color', '#ffffff');
+                root.style.setProperty('--text-color', '#333333');
+                root.style.setProperty('--card-bg', '#f0f0f0');
+            }
+        }
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.style.setProperty('--bg-color', '#1a1a1a');
+            document.documentElement.style.setProperty('--text-color', '#ffffff');
+            document.documentElement.style.setProperty('--card-bg', '#2a2a2a');
+        }
+    </script>
+</body>
+</html>
